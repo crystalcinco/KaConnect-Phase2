@@ -10,9 +10,9 @@ session_set_cookie_params([
     'samesite' => 'Lax'
 ]);
 ini_set('session.use_strict_mode', '1');
-session_start();
+session_unset();
 
-require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../.../database.php';
 require_once __DIR__ . '/../app/helpers.php';
 
 foreach (glob(__DIR__ . '/../app/models/*.php') as $file) require_once $file;
